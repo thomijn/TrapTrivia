@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+<<<<<<< HEAD
     "@material-ui/core": "^3.9.3",
     "@material-ui/icons": "^3.0.2",
     "react": "^16.8.6",
@@ -11,6 +12,12 @@
     "react-scripts": "2.1.8",
     "socket.io-client": "^2.2.0",
     "socketio": "^1.0.0",
+=======
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "2.1.8",
+    "socket.io-client": "^2.2.0",
+>>>>>>> origin/master
     "utf8": "^3.0.0"
   },
   "scripts": {

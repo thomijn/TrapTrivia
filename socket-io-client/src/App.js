@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Quiz from "./components/Quiz";
+<<<<<<< HEAD
 import QuizInfo from "./components/QuizInfo";
 import Result from "./components/Result";
 import Start from "./components/Start";
@@ -9,12 +10,16 @@ import "./App.css";
 import AppHeader from "./components/AppHeader";
 import Footer from "./components/Footer";
 import Grid from "@material-ui/core/Grid";
+=======
+import quizQuestions from "./api/quizQuestions";
+>>>>>>> origin/master
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       counter: 0,
+<<<<<<< HEAD
       result: 0,
       questionId: 1,
       question: "",
@@ -57,11 +62,31 @@ class App extends Component {
     this.setState({ answerGiven: this.state.response }, () =>
       this.handleAnswerSubmit()
     );
+=======
+      questionId: 1,
+      question: "",
+      answerOptions: [],
+      answer: ""
+    };
+  }
+
+  componentDidMount() {
+    this.setState({
+      question: quizQuestions[0].question
+    });
+  }
+
+  setUserAnswer(answer) {
+    this.setState({
+      answer: answer
+    });
+>>>>>>> origin/master
   }
 
   setNextQuestion() {
     const counter = this.state.counter + 1;
     const questionId = this.state.questionId + 1;
+<<<<<<< HEAD
     if (questionId != quizQuestions.length) {
       this.setState({
         counter: counter,
@@ -221,6 +246,27 @@ class App extends Component {
         <Footer />
       </div>
     );
+=======
+    this.setState({
+      counter: counter,
+      questionId: questionId,
+      question: quizQuestions[counter].question,
+      answer: ""
+    });
+  }
+
+  handleAnswerSelected(event) {
+    this.setUserAnswer("true");
+    if (this.state.questionId < 10) {
+      setTimeout(() => this.setNextQuestion(), 300);
+    } else {
+      // do nothing for now
+    }
+  }
+
+  render() {
+    return <Quiz question={this.state.question} />;
+>>>>>>> origin/master
   }
 }
 

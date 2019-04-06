@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
@@ -35,3 +36,15 @@ Question.propTypes = {
 };
 
 export default withStyles(styles)(Question);
+=======
+
+function Question(props) {
+  return (
+    <h2 className="question" style={{ textAlign: "center" }}>
+      {props.content}
+    </h2>
+  );
+}
+
+export default Question;
+>>>>>>> origin/master

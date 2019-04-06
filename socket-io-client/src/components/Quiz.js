@@ -1,6 +1,7 @@
 import React from "react";
 import Question from "../components/Question";
 import Answer from "../components/Answer";
+<<<<<<< HEAD
 import PropTypes from "prop-types";
 
 import Grid from "@material-ui/core/Grid";
@@ -33,4 +34,16 @@ Quiz.propTypes = {
   onAnswerSelected: PropTypes.func.isRequired
 };
 
+=======
+
+function Quiz(props) {
+  return (
+    <div className="quiz">
+      <Question content={props.question} />
+      <Answer />
+    </div>
+  );
+}
+
+>>>>>>> origin/master
 export default Quiz;

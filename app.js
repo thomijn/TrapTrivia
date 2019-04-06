@@ -12,7 +12,11 @@ const io = socketIo(server);
 
 var SerialPort = require('serialport');
 var Readline = require('@serialport/parser-readline'),
+<<<<<<< HEAD
   sp = new SerialPort('COM3', {
+=======
+  sp = new SerialPort('COM5', {
+>>>>>>> origin/master
     baudRate: 115200
   }),
 
